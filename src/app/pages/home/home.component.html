@@ -1,0 +1,37 @@
+<main>
+    <section class="hero">
+      <h1>Discover Amazing Events</h1>
+      <p>Find and book tickets for the best events in your area</p>
+      <form class="search-form">
+        <input type="text" placeholder="Search events...">
+        <button type="submit"><i class="material-icons">search</i></button>
+      </form>
+    </section>
+  
+    <section class="categories">
+      <h2>Browse by Category</h2>
+      <div class="category-grid">
+        <a href="#" class="category-card" *ngFor="let category of categories">
+          <i class="material-icons">{{category.icon}}</i>
+          <span>{{category.label}}</span>
+        </a>
+      </div>
+    </section>
+  
+    <section class="featured-events">
+      <h2>Featured Events</h2>
+      <div class="event-grid">
+        <div class="event-card" *ngFor="let event of events">
+          <img [src]="event.imageUrl" [alt]="event.eventName">
+          <div class="event-info">
+            <h3>{{event.eventName}}</h3>
+            <p><i class="material-icons">event</i>{{event.startDate}}</p>
+            <p><i class="material-icons">location_on</i>{{event.location}}</p>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  
